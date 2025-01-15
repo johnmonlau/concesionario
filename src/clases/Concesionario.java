@@ -16,6 +16,38 @@ public class Concesionario {
         this.direccion = direccion;
         this.CIF = CIF;
     }
+    // Getters y Setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getCIF() {
+        return CIF;
+    }
+
+    public void setCIF(String CIF) {
+        this.CIF = CIF;
+    }
+
+    public List<Vehiculo> getInventario() {
+        return inventario;
+    }
+
+    public void setInventario(List<Vehiculo> inventario) {
+        this.inventario = inventario;
+    }
 
     //funcion agregar
     public void agregarVehiculo(Vehiculo vehiculo) {
@@ -68,36 +100,5 @@ public class Concesionario {
         }
     }
 
-    // Getters y Setters
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getCIF() {
-        return CIF;
-    }
-
-    public void setCIF(String CIF) {
-        this.CIF = CIF;
-    }
-
-    public List<Vehiculo> getInventario() {
-        return inventario;
-    }
-
-    public void setInventario(List<Vehiculo> inventario) {
-        this.inventario = inventario;
-    }
 }

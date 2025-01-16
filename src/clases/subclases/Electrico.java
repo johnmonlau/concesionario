@@ -28,6 +28,11 @@ public class Electrico extends Vehiculo {
     }
 
     @Override
+    public String toString() {
+        return super.toString() + ", Autonomía: " + autonomia + " km, Tiempo de carga: " + tiempoDeCarga + " horas";
+    }
+
+    @Override
     public double obtenerPrecio() {
         return getPrecio();
     }

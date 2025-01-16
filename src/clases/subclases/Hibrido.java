@@ -19,6 +19,11 @@ public class Hibrido extends Vehiculo {
     }
 
     @Override
+    public String toString() {
+        return super.toString() + ", Autonomía de batería: " + autonomiaBateria + " km";
+    }
+
+    @Override
     public double obtenerPrecio() {
         return getPrecio();
     }

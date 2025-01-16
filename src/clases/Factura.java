@@ -2,7 +2,7 @@ package clases;
 
 import clases.Cliente;
 import clases.Vehiculo;
-
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Factura {
@@ -68,14 +68,20 @@ public class Factura {
         return factura;
     }
 
+    public String formatFecha(Date fecha) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        return sdf.format(fecha);
+    }
+
+
     @Override
     public String toString() {
-        return "Factura{" +
-                "idFactura=" + idFactura +
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        return "Factura{idFactura=" + idFactura +
                 ", cliente=" + cliente.getNombre() +
                 ", vehiculo=" + vehiculo.getMarca() + " " + vehiculo.getModelo() +
                 ", montoTotal=" + montoTotal +
-                ", fecha=" + fecha +
-                '}';
+                ", fecha=" + sdf.format(fecha) + "}";
     }
+
 }

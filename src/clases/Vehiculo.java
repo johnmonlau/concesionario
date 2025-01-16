@@ -55,6 +55,11 @@ public abstract class Vehiculo implements Vendible {
     }
 
     @Override
+    public String toString() {
+        return "Marca: " + marca + ", Modelo: " + modelo + ", Año: " + year + ", Precio: " + precio + "€";
+    }
+
+    @Override
     public abstract double obtenerPrecio();
 
     @Override

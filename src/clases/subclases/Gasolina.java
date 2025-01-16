@@ -29,6 +29,11 @@ public class Gasolina extends Vehiculo {
     }
 
     @Override
+    public String toString() {
+        return super.toString() + ", Emisiones CO2: " + (emisionesC02 ? "Sí" : "No") + ", ¿Tiene Turbo?: " + (esTurbo ? "Sí" : "No");
+    }
+
+    @Override
     public double obtenerPrecio() {
         return getPrecio();
     }

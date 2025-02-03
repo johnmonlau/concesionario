@@ -1,6 +1,6 @@
 package clases;
 import interfaces.Vendible;
-
+import exceptions.VehiculoInvalidoException;
 
 public abstract class Vehiculo implements Vendible {
     private String marca;
@@ -9,6 +9,13 @@ public abstract class Vehiculo implements Vendible {
     private double precio;
 
     public Vehiculo(String marca, String modelo, int year, double precio) {
+        if (precio < 0) {
+            throw new VehiculoInvalidoException("El precio del vehículo no puede ser negativo.");
+        }
+        if (year > 2025 || year < 1886) {  // Considerando que los vehículos no pueden ser del futuro o antes de 1886
+            throw new VehiculoInvalidoException("El año del vehículo es inválido.");
+        }
+
         this.marca = marca;
         this.modelo = modelo;
         this.year = year;
